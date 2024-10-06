@@ -1,0 +1,225 @@
+/* Основні налаштування */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #37383C;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Перша секція, яка займає весь екран */
+.section-full-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вирівнювання по вертикалі */
+    align-items: center; /* Вирівнювання по горизонталі */
+    height: 100vh; /* Висота 100% від екрану */
+    background: rgb(158,79,210);
+    background: linear-gradient(90deg, rgba(158,79,210,1) 12%, rgba(29,109,253,1) 62%, rgba(69,252,133,1) 100%);
+    text-align: center;
+}
+
+/* Основний контейнер для тексту і кнопки */
+.container-main>h1 {
+    font-size: 60px;
+    font-family: sans-serif;
+    margin-bottom: 40px;
+}
+
+#Info_button {
+    display: inline-block;
+    margin: 20px auto;
+    text-decoration: none;
+    background-color: orangered;
+    padding: 15px 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+/* Блок опису (підтримка менторів та інше) */
+.container-opys {
+    display: flex;
+    justify-content: center; /* Горизонтальне вирівнювання по центру */
+    align-items: center; /* Вертикальне вирівнювання по центру */
+    gap: 20px; /* Відстань між елементами */
+    flex-wrap: wrap; /* Додаємо можливість переносу елементів, якщо вони не вміщуються */
+    margin-top: 30px; /* Відступ зверху */
+}
+
+.container-opys p {
+    background-color: #ddd;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+/* Порожня секція, яка займає весь екран */
+.section-full-screen-empty {
+    height: 100vh;
+    background-color: #f4f4f4; /* Світлий фон для контрасту */
+}
+
+/* Основні стилі хедера */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+}
+
+.header .logo {
+    outline: 1px solid white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 20px; /* Закруглені кути */
+}
+
+.nav-links a:hover {
+    color: #ddd; /* Зміна кольору тексту при наведенні */
+    border: 1px solid white; /* Білий бордер при наведенні */
+}
+
+/* Загальні стилі для випадаючого меню */
+.dropdown-menu {
+    top: 140%;
+    left: 0;
+    background-color: #fff; /* Білий фон */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center; /* Вирівнюємо текст по центру */
+}
+
+/* Для елементів випадаючого меню в один рядок */
+.dropdown-menu a {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #000; /* Колір тексту */
+    display: inline-block;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+/* При наведенні курсору на елемент */
+.dropdown-menu a:hover {
+    background-color: #5f6066;
+}
+
+/* Відображення меню при активованому класі 'show' */
+.show {
+    display: flex;
+    justify-content: center;
+}
+
+/* Кнопки входу і реєстрації */
+.buttons .btn {
+    padding: 8px 15px;
+    border: 2px solid #1e90ff;
+    border-radius: 25px;
+    color: #1e90ff;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons .btn:hover {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.buttons .btn-primary {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.buttons .btn-primary:hover {
+    background-color: #1576d2;
+}
+
+/* Стилі для футера */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    flex-shrink: 0;
+    border-top: 5px solid #fff;
+    /* Біла полоса зверху футера */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    max-width: 500px;
+}
+
+.footer-logo img {
+    width: 400px;
+}
+
+.footer-logo p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.foot-ul li a {
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.foot-ul {
+    list-style: none;
+}
+
+.foot-ul {
+    display: inline-flex;
+    padding-left: 10px;
+}
+
+a[target="_blank"] {
+    color: rgb(156, 192, 192); /* Задаємо колір для зовнішніх посилань */
+}
+
+b+i {
+    color: crimson;
+}
+section{
+    background: rgb(158,79,210);
+    background: linear-gradient(90deg, rgba(158,79,210,1) 12%, rgba(29,109,253,1) 62%, rgba(69,252,133,1) 100%);
+}
+.hh{
+    font-family: 'Times New Roman', Times, serif;
+}
