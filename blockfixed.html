@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фіксована блокова верстка</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #header, #footer {
+            background-color: blue;
+            height: 100px;
+            width: 100%;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+        #main {
+            display: flex;
+            flex: 1; /* Гнучка область між header і footer */
+        }
+        #sidebar-left {
+            background-color: yellow;
+            width: 100px;
+        }
+        #sidebar-right {
+            background-color: yellow;
+            width: 100px;
+        }
+        #content {
+            flex: 1;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">1</div>
+    <div id="main">
+        <div id="sidebar-left">2</div>
+        <div id="content">4</div>
+        <div id="sidebar-right">2</div>
+    </div>
+    <div id="footer">3</div>
+</body>
+</html>
